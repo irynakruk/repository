@@ -1,5 +1,6 @@
 package com.reflection.cloner;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
@@ -8,7 +9,15 @@ public class PrototypeCloner {
 	public static Object clone(Object prototype) {
 		Object clone = null;
 		try {
-			clone = prototype.getClass().newInstance();
+			Constructor<?> ctor = null;
+			for (Constructor<?> constr : prototype.getClass().getDeclaredConstructors()) {
+			    ctor = constr;
+			    if (ctor.getGenericParameterTypes().length == 0)
+				break;
+			}
+			ctor.setAccessible(true);
+			clone = ctor.newInstance();
+			
 			for (Class<?> obj = prototype.getClass(); !obj.equals(Object.class); obj = obj
 					.getSuperclass()) {
 				for (Field field : obj.getDeclaredFields()) {
@@ -20,7 +29,7 @@ public class PrototypeCloner {
 					}
 				}
 			}
-		} catch (InstantiationException | IllegalAccessException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return clone;
