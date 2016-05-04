@@ -13,14 +13,14 @@ import javax.xml.bind.annotation.XmlType;
 public class SqrResponse {
 
     @XmlElement(name = "return", namespace = "")
-    private int _return;
+    private double _return;
 
     /**
      * 
      * @return
-     *     returns int
+     *     returns double
      */
-    public int getReturn() {
+    public double getReturn() {
         return this._return;
     }
 
@@ -29,7 +29,7 @@ public class SqrResponse {
      * @param _return
      *     the value for the _return property
      */
-    public void setReturn(int _return) {
+    public void setReturn(double _return) {
         this._return = _return;
     }
 

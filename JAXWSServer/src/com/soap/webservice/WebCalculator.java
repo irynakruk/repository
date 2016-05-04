@@ -7,17 +7,17 @@ import javax.jws.WebService;
 public interface WebCalculator {
 	
 	@WebMethod
-	public int add(int a, int b);
+	public double add(double arg0, double arg1);
 
 	@WebMethod
-	public int subtract(int a, int b);
+	public double subtract(double arg0, double arg1);
 
 	@WebMethod
-	public int multiply(int a, int b);
+	public double multiply(double arg0, double arg1);
 
 	@WebMethod
-	public int divide(int a, int b);
+	public double divide(double arg0, double arg1);
 
 	@WebMethod
-	public int sqr(int a);
+	public double sqr(double arg0);
 }

@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
 public class Divide {
 
     @XmlElement(name = "arg0", namespace = "")
-    private int arg0;
+    private double arg0;
     @XmlElement(name = "arg1", namespace = "")
-    private int arg1;
+    private double arg1;
 
     /**
      * 
      * @return
-     *     returns int
+     *     returns double
      */
-    public int getArg0() {
+    public double getArg0() {
         return this.arg0;
     }
 
@@ -34,16 +34,16 @@ public class Divide {
      * @param arg0
      *     the value for the arg0 property
      */
-    public void setArg0(int arg0) {
+    public void setArg0(double arg0) {
         this.arg0 = arg0;
     }
 
     /**
      * 
      * @return
-     *     returns int
+     *     returns double
      */
-    public int getArg1() {
+    public double getArg1() {
         return this.arg1;
     }
 
@@ -52,7 +52,7 @@ public class Divide {
      * @param arg1
      *     the value for the arg1 property
      */
-    public void setArg1(int arg1) {
+    public void setArg1(double arg1) {
         this.arg1 = arg1;
     }
 

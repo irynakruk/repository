@@ -13,14 +13,14 @@ import javax.xml.bind.annotation.XmlType;
 public class Sqr {
 
     @XmlElement(name = "arg0", namespace = "")
-    private int arg0;
+    private double arg0;
 
     /**
      * 
      * @return
-     *     returns int
+     *     returns double
      */
-    public int getArg0() {
+    public double getArg0() {
         return this.arg0;
     }
 
@@ -29,7 +29,7 @@ public class Sqr {
      * @param arg0
      *     the value for the arg0 property
      */
-    public void setArg0(int arg0) {
+    public void setArg0(double arg0) {
         this.arg0 = arg0;
     }
 

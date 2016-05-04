@@ -6,27 +6,27 @@ import javax.jws.WebService;
 public class WebCalculatorImpl implements WebCalculator {
 	
 	@Override
-	public int add(int a, int b) {
-		return (a + b);
+	public double add(double arg0, double arg1) {
+		return (arg0 + arg1);
 	}
 	
 	@Override
-	public int subtract(int a, int b) {
-		return (a - b);
+	public double subtract(double arg0, double arg1) {
+		return (arg0 - arg1);
 	}
 
 	@Override
-	public int multiply(int a, int b) {
-		return (a * b);
+	public double multiply(double arg0, double arg1) {
+		return (arg0 * arg1);
 	}
 
 	@Override
-	public int divide(int a, int b) {
-		return (a / b);
+	public double divide(double arg0, double arg1) {
+		return (arg0 / arg1);
 	}
 
 	@Override
-	public int sqr(int a) {
-		return a * a;
+	public double sqr(double arg0) {
+		return arg0 * arg0;
 	}
 }
